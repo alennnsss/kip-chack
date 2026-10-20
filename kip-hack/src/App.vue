@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import CtaSection from './components/CtaSection.vue';
 import IconSprite from './components/IconSprite.vue';
+import ScrollTopButton from './components/ScrollTopButton.vue';
 </script>
 
 <template>
@@ -11,4 +12,5 @@ import IconSprite from './components/IconSprite.vue';
     <RouterView />
     <CtaSection />
   </main>
+  <ScrollTopButton />
 </template>

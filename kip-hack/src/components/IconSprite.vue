@@ -2,6 +2,7 @@
   <svg class="sprite" aria-hidden="true">
     <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6" /></symbol>
     <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4M10 6l-6 6 6 6" /></symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M12 20V4M6 10l6-6 6 6" /></symbol>
     <symbol id="icon-arrow-down" viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6" /></symbol>
     <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></symbol>
     <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" /></symbol>

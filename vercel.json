@@ -1,0 +1,6 @@
+{
+  "installCommand": "npm install --prefix kip-hack",
+  "buildCommand": "npm run build --prefix kip-hack",
+  "outputDirectory": "kip-hack/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

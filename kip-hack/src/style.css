@@ -773,6 +773,25 @@ img {
   color: var(--color-text-muted-on-dark);
 }
 
+.scroll-top {
+  position: fixed;
+  right: var(--gutter);
+  bottom: var(--gutter);
+  z-index: 5;
+  border-color: var(--color-text-on-dark);
+}
+
+.scroll-top-enter-active,
+.scroll-top-leave-active {
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.scroll-top-enter-from,
+.scroll-top-leave-to {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
