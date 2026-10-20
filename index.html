@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KIPCHACK — школа метания ножей в Алматы</title>
+  <meta name="description" content="Школа метания ножей, стрельбы из лука и топоров в Алматы">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Russo+One&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4M10 6l-6 6 6 6"/></symbol>
+    <symbol id="icon-arrow-down" viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></symbol>
+    <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="icon-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/><path d="M16 4a4 4 0 0 1 0 8M18 15c2.5.5 4 2.5 4 6"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  </svg>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top">
+        <span class="logo__name">KIPCHACK</span>
+        <span class="logo__caption">школа метания ножей</span>
+      </a>
+      <button class="round-btn round-btn--filled header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
+        <svg class="icon header__icon-open"><use href="#icon-menu"/></svg>
+        <svg class="icon header__icon-close"><use href="#icon-close"/></svg>
+      </button>
+    </div>
+    <nav class="menu" id="menu" aria-label="Основное меню" hidden>
+      <ul class="menu__list">
+        <li><a class="menu__link" href="#directions">Направления</a></li>
+        <li><a class="menu__link" href="#about">О школе</a></li>
+        <li><a class="menu__link" href="#formats">Форматы</a></li>
+        <li><a class="menu__link" href="#gallery">Галерея</a></li>
+        <li><a class="menu__link" href="#instructors">Инструкторы</a></li>
+        <li><a class="menu__link" href="#prices">Цены</a></li>
+        <li><a class="menu__link" href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__head">
+          <h1 class="title title--hero">Точность в характере</h1>
+          <p class="hero__subtitle">Школа метания ножей, стрельбы из лука и топоров в Алматы</p>
+        </div>
+        <img class="hero__image" src="assets/img/hero-knife.svg" alt="Метательный нож" width="800" height="800">
+        <div class="hero__body">
+          <a class="btn" href="#prices">
+            Записаться на занятие
+            <svg class="icon"><use href="#icon-arrow-right"/></svg>
+          </a>
+          <ul class="stats">
+            <li class="stats__item"><span class="stats__value">3+</span> <span class="stats__label">направления</span></li>
+            <li class="stats__item"><span class="stats__value">500+</span> <span class="stats__label">учеников</span></li>
+            <li class="stats__item"><span class="stats__value">95%</span> <span class="stats__label">возвращаются</span></li>
+          </ul>
+        </div>
+        <a class="hero__scroll" href="#directions">
+          Скролл
+          <span class="round-btn"><svg class="icon"><use href="#icon-arrow-down"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="directions">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Наши направления</p>
+          <h2 class="title">Выбери свою стихию</h2>
+        </div>
+        <ul class="grid">
+          <li class="card card--dark">
+            <img class="card__media" src="assets/img/direction-knives.svg" alt="Ножи в мишени" width="800" height="600" loading="lazy">
+            <div class="card__row">
+              <h3 class="card__title">Метание ножей</h3>
+              <a class="round-btn" href="#prices" aria-label="Цены: метание ножей"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+          <li class="card card--dark">
+            <img class="card__media" src="assets/img/direction-bow.svg" alt="Лук со стрелой" width="800" height="600" loading="lazy">
+            <div class="card__row">
+              <h3 class="card__title">Стрельба из лука</h3>
+              <a class="round-btn" href="#prices" aria-label="Цены: стрельба из лука"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+          <li class="card card--dark">
+            <img class="card__media" src="assets/img/direction-axe.svg" alt="Метательный топор" width="800" height="600" loading="lazy">
+            <div class="card__row">
+              <h3 class="card__title">Метание топоров</h3>
+              <a class="round-btn" href="#prices" aria-label="Цены: метание топоров"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__content">
+          <div class="section-head">
+            <p class="eyebrow">О школе</p>
+            <h2 class="title">KIPCHACK — больше, чем спорт</h2>
+          </div>
+          <p class="text">Мы учим метать ножи и топоры, стрелять из лука с нуля и до уровня соревнований. Безопасно, с вниманием к каждому ученику и в атмосфере, куда хочется возвращаться.</p>
+          <ul class="features">
+            <li class="feature">
+              <svg class="icon feature__icon"><use href="#icon-award"/></svg>
+              <span class="feature__title">Опытные инструкторы</span>
+            </li>
+            <li class="feature">
+              <svg class="icon feature__icon"><use href="#icon-shield"/></svg>
+              <span class="feature__title">Безопасность на каждом занятии</span>
+            </li>
+            <li class="feature">
+              <svg class="icon feature__icon"><use href="#icon-target"/></svg>
+              <span class="feature__title">Профессиональный инвентарь</span>
+            </li>
+            <li class="feature">
+              <svg class="icon feature__icon"><use href="#icon-users"/></svg>
+              <span class="feature__title">Для любого возраста и уровня</span>
+            </li>
+          </ul>
+        </div>
+        <img class="about__image" src="assets/img/about-archer.svg" alt="Лучник на тренировке" width="800" height="1000" loading="lazy">
+        <a class="btn about__action" href="#formats">
+          Узнать больше
+          <svg class="icon"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="formats">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Форматы занятий</p>
+          <h2 class="title">Для каждого</h2>
+        </div>
+        <ul class="grid">
+          <li class="card card--dark">
+            <div class="card__row">
+              <span class="card__icon"><svg class="icon"><use href="#icon-user"/></svg></span>
+              <a class="round-btn" href="#prices" aria-label="Цены: индивидуальные занятия"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+            </div>
+            <h3 class="card__title">Индивидуальные занятия</h3>
+          </li>
+          <li class="card card--dark">
+            <div class="card__row">
+              <span class="card__icon"><svg class="icon"><use href="#icon-users"/></svg></span>
+              <a class="round-btn" href="#prices" aria-label="Цены: групповые тренировки"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+            </div>
+            <h3 class="card__title">Групповые тренировки</h3>
+          </li>
+          <li class="card card--dark">
+            <div class="card__row">
+              <span class="card__icon"><svg class="icon"><use href="#icon-briefcase"/></svg></span>
+              <a class="round-btn" href="#prices" aria-label="Цены: корпоративные мероприятия"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+            </div>
+            <h3 class="card__title">Корпоративные мероприятия</h3>
+          </li>
+        </ul>
+        <img class="formats__image" src="assets/img/formats-target.svg" alt="Мишень с ножом" width="1200" height="600" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Галерея</p>
+          <h2 class="title">Атмосфера KIPCHACK</h2>
+        </div>
+        <div class="slider" data-slider>
+          <div class="slider__viewport">
+            <ul class="slider__track">
+              <li class="slider__slide"><img class="slider__image" src="assets/img/gallery-1.svg" alt="Метательный нож крупным планом" width="1200" height="900" loading="lazy"></li>
+              <li class="slider__slide"><img class="slider__image" src="assets/img/gallery-2.svg" alt="Топор в мишени" width="1200" height="900" loading="lazy"></li>
+              <li class="slider__slide"><img class="slider__image" src="assets/img/gallery-3.svg" alt="Лук и стрела" width="1200" height="900" loading="lazy"></li>
+              <li class="slider__slide"><img class="slider__image" src="assets/img/gallery-4.svg" alt="Два метательных топора" width="1200" height="900" loading="lazy"></li>
+              <li class="slider__slide"><img class="slider__image" src="assets/img/gallery-5.svg" alt="Ножи в центре мишени" width="1200" height="900" loading="lazy"></li>
+              <li class="slider__slide"><img class="slider__image" src="assets/img/gallery-6.svg" alt="Ученик школы" width="1200" height="900" loading="lazy"></li>
+            </ul>
+          </div>
+          <div class="slider__thumbs">
+            <button class="slider__thumb" type="button" aria-label="Фото 1"><img src="assets/img/gallery-1.svg" alt="" width="1200" height="900" loading="lazy"></button>
+            <button class="slider__thumb" type="button" aria-label="Фото 2"><img src="assets/img/gallery-2.svg" alt="" width="1200" height="900" loading="lazy"></button>
+            <button class="slider__thumb" type="button" aria-label="Фото 3"><img src="assets/img/gallery-3.svg" alt="" width="1200" height="900" loading="lazy"></button>
+            <button class="slider__thumb" type="button" aria-label="Фото 4"><img src="assets/img/gallery-4.svg" alt="" width="1200" height="900" loading="lazy"></button>
+            <button class="slider__thumb" type="button" aria-label="Фото 5"><img src="assets/img/gallery-5.svg" alt="" width="1200" height="900" loading="lazy"></button>
+            <button class="slider__thumb" type="button" aria-label="Фото 6"><img src="assets/img/gallery-6.svg" alt="" width="1200" height="900" loading="lazy"></button>
+          </div>
+          <div class="slider__controls">
+            <button class="round-btn" type="button" data-slider-prev aria-label="Предыдущее фото"><svg class="icon"><use href="#icon-arrow-left"/></svg></button>
+            <p class="slider__counter"><span class="slider__current">01</span> / <span class="slider__total">06</span></p>
+            <button class="round-btn" type="button" data-slider-next aria-label="Следующее фото"><svg class="icon"><use href="#icon-arrow-right"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="instructors">
+      <div class="container instructors">
+        <div class="section-head">
+          <p class="eyebrow">Наши инструкторы</p>
+          <h2 class="title">Опыт. Практика. Вдохновение.</h2>
+        </div>
+        <div class="slider" data-slider>
+          <div class="slider__viewport">
+            <ul class="slider__track">
+              <li class="slider__slide">
+                <figure class="instructor">
+                  <img class="instructor__photo" src="assets/img/instructor-1.svg" alt="Инструктор Арман" width="800" height="1000" loading="lazy">
+                  <figcaption>
+                    <p class="card__title">Арман</p>
+                    <p class="text">Метание ножей, стаж 8 лет</p>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="slider__slide">
+                <figure class="instructor">
+                  <img class="instructor__photo" src="assets/img/instructor-2.svg" alt="Инструктор Дана" width="800" height="1000" loading="lazy">
+                  <figcaption>
+                    <p class="card__title">Дана</p>
+                    <p class="text">Стрельба из лука, стаж 6 лет</p>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="slider__slide">
+                <figure class="instructor">
+                  <img class="instructor__photo" src="assets/img/instructor-3.svg" alt="Инструктор Ерлан" width="800" height="1000" loading="lazy">
+                  <figcaption>
+                    <p class="card__title">Ерлан</p>
+                    <p class="text">Метание топоров, стаж 5 лет</p>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+            <div class="slider__arrows">
+              <button class="round-btn round-btn--filled" type="button" data-slider-prev aria-label="Предыдущий инструктор"><svg class="icon"><use href="#icon-arrow-left"/></svg></button>
+              <button class="round-btn round-btn--filled" type="button" data-slider-next aria-label="Следующий инструктор"><svg class="icon"><use href="#icon-arrow-right"/></svg></button>
+            </div>
+          </div>
+          <p class="slider__counter"><span class="slider__current">01</span> / <span class="slider__total">03</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Цены</p>
+          <h2 class="title">Выбери свой формат</h2>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Формат занятий">
+          <button class="tabs__tab" type="button" role="tab" id="tab-individual" aria-controls="panel-individual" aria-selected="true">Индивидуальные</button>
+          <button class="tabs__tab" type="button" role="tab" id="tab-group" aria-controls="panel-group" aria-selected="false" tabindex="-1">Групповые</button>
+          <button class="tabs__tab" type="button" role="tab" id="tab-corporate" aria-controls="panel-corporate" aria-selected="false" tabindex="-1">Корпоративные</button>
+        </div>
+
+        <div class="grid tabs__panel" role="tabpanel" id="panel-individual" aria-labelledby="tab-individual">
+          <article class="card">
+            <h3 class="card__title">Разовое занятие</h3>
+            <p class="price"><span class="price__current">15 000 ₸</span> <s class="price__old">18 000 ₸</s></p>
+            <ul class="checklist">
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>60 минут с инструктором</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Любое направление</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Инвентарь включён</li>
+            </ul>
+            <a class="round-btn round-btn--filled card__action" href="#contacts" aria-label="Записаться: разовое занятие"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Абонемент 4 занятия</h3>
+            <p class="price"><span class="price__current">52 000 ₸</span> <s class="price__old">60 000 ₸</s></p>
+            <ul class="checklist">
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>4 занятия по 60 минут</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Индивидуальная программа</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Срок действия 1 месяц</li>
+            </ul>
+            <a class="round-btn round-btn--filled card__action" href="#contacts" aria-label="Записаться: абонемент 4 занятия"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Абонемент 8 занятий</h3>
+            <p class="price"><span class="price__current">96 000 ₸</span> <s class="price__old">120 000 ₸</s></p>
+            <ul class="checklist">
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>8 занятий по 60 минут</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Индивидуальная программа</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Срок действия 2 месяца</li>
+            </ul>
+            <a class="round-btn round-btn--filled card__action" href="#contacts" aria-label="Записаться: абонемент 8 занятий"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+          </article>
+        </div>
+
+        <div class="grid tabs__panel" role="tabpanel" id="panel-group" aria-labelledby="tab-group" hidden>
+          <article class="card">
+            <h3 class="card__title">Разовая тренировка</h3>
+            <p class="price"><span class="price__current">7 000 ₸</span> <s class="price__old">9 000 ₸</s></p>
+            <ul class="checklist">
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>90 минут в группе до 6 человек</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Инвентарь включён</li>
+            </ul>
+            <a class="round-btn round-btn--filled card__action" href="#contacts" aria-label="Записаться: разовая тренировка"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Абонемент 8 тренировок</h3>
+            <p class="price"><span class="price__current">48 000 ₸</span> <s class="price__old">56 000 ₸</s></p>
+            <ul class="checklist">
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>8 тренировок по 90 минут</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Инвентарь включён</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Срок действия 1 месяц</li>
+            </ul>
+            <a class="round-btn round-btn--filled card__action" href="#contacts" aria-label="Записаться: абонемент 8 тренировок"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+          </article>
+        </div>
+
+        <div class="grid tabs__panel" role="tabpanel" id="panel-corporate" aria-labelledby="tab-corporate" hidden>
+          <article class="card">
+            <h3 class="card__title">До 10 человек</h3>
+            <p class="price"><span class="price__current">120 000 ₸</span> <s class="price__old">150 000 ₸</s></p>
+            <ul class="checklist">
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>2 часа, все направления</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Два инструктора</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Мини-турнир с призами</li>
+            </ul>
+            <a class="round-btn round-btn--filled card__action" href="#contacts" aria-label="Записаться: до 10 человек"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+          </article>
+          <article class="card">
+            <h3 class="card__title">До 20 человек</h3>
+            <p class="price"><span class="price__current">220 000 ₸</span> <s class="price__old">270 000 ₸</s></p>
+            <ul class="checklist">
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>3 часа, все направления</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Три инструктора</li>
+              <li class="checklist__item"><svg class="icon"><use href="#icon-check"/></svg>Мини-турнир с призами</li>
+            </ul>
+            <a class="round-btn round-btn--filled card__action" href="#contacts" aria-label="Записаться: до 20 человек"><svg class="icon"><use href="#icon-arrow-up-right"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container contacts">
+        <div class="section-head">
+          <p class="eyebrow">Как нас найти</p>
+          <h2 class="title">Мы ждём вас в Алматы</h2>
+        </div>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <span class="contacts__icon"><svg class="icon"><use href="#icon-pin"/></svg></span>
+            <span><span class="contacts__label">Адрес</span> <span class="contacts__value">г. Алматы, ул. Примерная, 1</span></span>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__icon"><svg class="icon"><use href="#icon-clock"/></svg></span>
+            <span><span class="contacts__label">Часы работы</span> <span class="contacts__value">Ежедневно 10:00–22:00</span></span>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__icon"><svg class="icon"><use href="#icon-phone"/></svg></span>
+            <span><span class="contacts__label">Телефон</span> <a class="contacts__value" href="tel:+77000000000">+7 (700) 000-00-00</a></span>
+          </li>
+        </ul>
+        <iframe class="contacts__map" title="Карта: KIPCHACK в Алматы" src="https://www.openstreetmap.org/export/embed.html?bbox=76.90%2C43.22%2C76.99%2C43.26&amp;layer=mapnik&amp;marker=43.2380%2C76.9450" loading="lazy"></iframe>
+        <a class="btn contacts__action" href="https://www.openstreetmap.org/directions?to=43.2380%2C76.9450" target="_blank" rel="noopener">
+          Построить маршрут
+          <svg class="icon"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="cta">
+      <img class="cta__bg" src="assets/img/cta-knife.svg" alt="" width="1600" height="900" loading="lazy">
+      <div class="container cta__inner">
+        <h2 class="title title--hero">Сделай первый бросок</h2>
+        <p class="cta__text">Первое занятие — с инструктором и полным инструктажем по безопасности</p>
+        <a class="btn btn--accent" href="tel:+77000000000">
+          Записаться
+          <svg class="icon"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

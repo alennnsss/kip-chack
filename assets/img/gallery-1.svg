@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="25%" r="90%">
+      <stop offset="0" stop-color="#555"/>
+      <stop offset="1" stop-color="#151515"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2f2f2"/>
+      <stop offset=".5" stop-color="#a8a8a8"/>
+      <stop offset="1" stop-color="#5a5a5a"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#bdbdbd"/>
+      <stop offset="1" stop-color="#6e6e6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  
+  <g transform="translate(600 450) rotate(-20) scale(1.8)">
+    <path d="M-170 0 L-40 -26 L230 0 L-40 26 Z" fill="url(#metal)"/>
+    <path d="M-40 -26 L230 0 L-40 0 Z" fill="#fff" opacity=".12"/>
+    <rect x="-170" y="-14" width="110" height="28" rx="4" fill="#1b1b1b"/>
+    <line x1="-160" y1="-14" x2="-150" y2="14" stroke="#555" stroke-width="4"/><line x1="-138" y1="-14" x2="-128" y2="14" stroke="#555" stroke-width="4"/><line x1="-116" y1="-14" x2="-106" y2="14" stroke="#555" stroke-width="4"/><line x1="-94" y1="-14" x2="-84" y2="14" stroke="#555" stroke-width="4"/><line x1="-72" y1="-14" x2="-62" y2="14" stroke="#555" stroke-width="4"/>
+    <circle cx="-185" cy="0" r="12" fill="none" stroke="url(#metal)" stroke-width="6"/>
+  </g>
+</svg>

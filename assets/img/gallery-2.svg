@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="25%" r="90%">
+      <stop offset="0" stop-color="#3a3a3a"/>
+      <stop offset="1" stop-color="#0b0b0b"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2f2f2"/>
+      <stop offset=".5" stop-color="#a8a8a8"/>
+      <stop offset="1" stop-color="#5a5a5a"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#bdbdbd"/>
+      <stop offset="1" stop-color="#6e6e6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  
+  <g transform="translate(600 450) scale(1.6)">
+    <circle r="220" fill="#d9d9d9"/><circle r="176" fill="#2b2b2b"/><circle r="132" fill="#d9d9d9"/><circle r="88" fill="#2b2b2b"/><circle r="44" fill="#d9d9d9"/>
+    <circle r="12" fill="#111"/>
+    <line x1="0" y1="0" x2="220" y2="0" stroke="#777" stroke-width="1" opacity=".5"/><line x1="0" y1="0" x2="155.56349186104046" y2="155.56349186104043" stroke="#777" stroke-width="1" opacity=".5"/><line x1="0" y1="0" x2="1.3471114790620885e-14" y2="220" stroke="#777" stroke-width="1" opacity=".5"/><line x1="0" y1="0" x2="-155.56349186104043" y2="155.56349186104046" stroke="#777" stroke-width="1" opacity=".5"/><line x1="0" y1="0" x2="-220" y2="2.694222958124177e-14" stroke="#777" stroke-width="1" opacity=".5"/><line x1="0" y1="0" x2="-155.5634918610405" y2="-155.56349186104043" stroke="#777" stroke-width="1" opacity=".5"/><line x1="0" y1="0" x2="-4.0413344371862656e-14" y2="-220" stroke="#777" stroke-width="1" opacity=".5"/><line x1="0" y1="0" x2="155.5634918610404" y2="-155.5634918610405" stroke="#777" stroke-width="1" opacity=".5"/>
+  </g>
+  <g transform="translate(640 420) rotate(30) scale(0.9)">
+    <rect x="-12" y="-200" width="24" height="420" rx="10" fill="#3a3a3a"/>
+    <path d="M-14 -190 L80 -235 Q140 -150 80 -60 L-14 -105 Z" fill="url(#metal)"/>
+    <path d="M80 -235 Q140 -150 80 -60 L70 -70 Q120 -150 70 -222 Z" fill="#fff" opacity=".2"/>
+  </g>
+</svg>
