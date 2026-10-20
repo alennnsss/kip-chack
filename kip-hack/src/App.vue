@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader.vue';
 import CtaSection from './components/CtaSection.vue';
 import IconSprite from './components/IconSprite.vue';
 import ScrollTopButton from './components/ScrollTopButton.vue';
+import { Analytics } from "@vercel/analytics/next"
 </script>
 
 <template>
@@ -13,4 +14,5 @@ import ScrollTopButton from './components/ScrollTopButton.vue';
     <CtaSection />
   </main>
   <ScrollTopButton />
+  <Analytics />
 </template>
