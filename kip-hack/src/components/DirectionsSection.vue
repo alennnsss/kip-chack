@@ -1,12 +1,37 @@
 <script setup>
+import { ref } from 'vue';
 import AppIcon from './AppIcon.vue';
+import DirectionModal from './DirectionModal.vue';
 import SectionHead from './SectionHead.vue';
 
 const directions = [
-  { title: 'Метание ножей', image: '/img/knives-target.jpg', alt: 'Метательные ножи в мишени', width: 1280, height: 853 },
-  { title: 'Стрельба из лука', image: '/img/arrows-target.jpg', alt: 'Стрелы в мишени', width: 1280, height: 960 },
-  { title: 'Метание топоров', image: '/img/axe.jpg', alt: 'Топор в деревянной мишени', width: 960, height: 1280 },
+  {
+    title: 'Метание ножей',
+    image: '/img/knives-target.jpg',
+    alt: 'Метательные ножи в мишени',
+    width: 1280,
+    height: 853,
+    description: 'Хват, стойка и расчёт оборотов ножа. Начинаем с безопасной техники на короткой дистанции и постепенно усложняем. Входит во все пакеты: «Старт», «Драйв» и «Полное погружение».',
+  },
+  {
+    title: 'Стрельба из лука',
+    image: '/img/arrows-target.jpg',
+    alt: 'Стрелы в мишени',
+    width: 1280,
+    height: 960,
+    description: 'Постановка стойки, натяжение тетивы и прицеливание. Можно прийти на отдельное занятие — 8 000 ₸ за 60 минут — или взять пакет «Полное погружение».',
+  },
+  {
+    title: 'Метание топоров',
+    image: '/img/axe.jpg',
+    alt: 'Топор в деревянной мишени',
+    width: 960,
+    height: 1280,
+    description: 'Мощный бросок одной и двумя руками, работа с дистанцией и вращением. Входит в пакеты «Драйв» и «Полное погружение».',
+  },
 ];
+
+const activeDirection = ref(null);
 </script>
 
 <template>
@@ -25,12 +50,19 @@ const directions = [
           >
           <div class="card__row">
             <h3 class="card__title">{{ direction.title }}</h3>
-            <RouterLink class="round-btn" to="#prices" :aria-label="`Цены: ${direction.title}`">
+            <button
+              class="round-btn"
+              type="button"
+              aria-haspopup="dialog"
+              :aria-label="`Подробнее: ${direction.title}`"
+              @click="activeDirection = direction"
+            >
               <AppIcon name="arrow-up-right" />
-            </RouterLink>
+            </button>
           </div>
         </li>
       </ul>
     </div>
+    <DirectionModal :direction="activeDirection" @close="activeDirection = null" />
   </section>
 </template>

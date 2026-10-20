@@ -773,6 +773,56 @@ img {
   color: var(--color-text-muted-on-dark);
 }
 
+.modal {
+  width: min(560px, 100% - 2 * var(--gutter));
+  max-width: none;
+  max-height: calc(100dvh - 2 * var(--gutter));
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.modal[open] {
+  animation: modal-in var(--transition);
+}
+
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.75);
+}
+
+.modal[open]::backdrop {
+  animation: fade-in var(--transition);
+}
+
+.modal__body {
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 1;
+}
+
+.card--dark .btn {
+  background: var(--color-text-on-dark);
+  color: var(--color-dark);
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
 .scroll-top {
   position: fixed;
   right: var(--gutter);
@@ -799,6 +849,11 @@ img {
 
   .slider__track {
     transition: none;
+  }
+
+  .modal[open],
+  .modal[open]::backdrop {
+    animation: none;
   }
 }
 
