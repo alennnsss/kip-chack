@@ -23,6 +23,7 @@
   --section-gap: clamp(64px, 10vw, 120px);
   --control-size: 48px;
   --transition: 0.3s ease;
+  --shadow-popup: 0 16px 40px rgb(0 0 0 / 0.25);
 }
 
 *,
@@ -284,17 +285,12 @@ img {
 }
 
 .header__inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding-block: 16px;
-}
-
-.logo,
-.header__burger {
-  position: relative;
-  z-index: 1;
 }
 
 .logo {
@@ -315,43 +311,59 @@ img {
   color: var(--color-text-muted);
 }
 
-.header--open .logo {
-  color: var(--color-text-on-dark);
-}
-
-.header--open .header__burger {
-  background: var(--color-text-on-dark);
-  color: var(--color-dark);
-}
-
 .menu {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  padding: 96px var(--gutter) 32px;
-  overflow-y: auto;
-  background: var(--color-dark);
+  position: absolute;
+  top: calc(100% - 8px);
+  right: var(--gutter);
+  width: min(280px, 100% - 2 * var(--gutter));
+  padding: 8px;
+  border: 1px solid var(--color-border-on-dark);
+  border-radius: var(--radius-card);
+  background: var(--color-dark-surface);
+  box-shadow: var(--shadow-popup);
+  transform-origin: top right;
+}
+
+.menu-enter-active,
+.menu-leave-active {
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.menu-enter-from,
+.menu-leave-to {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.96);
 }
 
 .menu__list {
   display: grid;
-  gap: 16px;
-  width: 100%;
-  max-width: var(--container);
-  margin-inline: auto;
+}
+
+.menu__item {
+  animation: menu-item-in var(--transition) both;
+  animation-delay: calc(var(--i) * 35ms);
 }
 
 .menu__link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: var(--radius-inner);
   font-family: var(--font-display);
-  font-size: clamp(28px, 6vw, 48px);
+  font-size: 15px;
   text-transform: uppercase;
   color: var(--color-text-on-dark);
-  transition: color var(--transition);
+  transition: background-color var(--transition);
 }
 
 .menu__link:hover {
-  color: var(--color-text-muted-on-dark);
+  background: var(--color-border-on-dark);
+}
+
+@keyframes menu-item-in {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
 }
 
 .hero {
@@ -852,8 +864,14 @@ img {
   }
 
   .modal[open],
-  .modal[open]::backdrop {
+  .modal[open]::backdrop,
+  .menu__item {
     animation: none;
+  }
+
+  .menu-enter-active,
+  .menu-leave-active {
+    transition: none;
   }
 }
 

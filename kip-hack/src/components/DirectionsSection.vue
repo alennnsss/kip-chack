@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import AppIcon from './AppIcon.vue';
-import DirectionModal from './DirectionModal.vue';
+import InfoModal from './InfoModal.vue';
 import SectionHead from './SectionHead.vue';
 
 const directions = [
@@ -63,6 +63,6 @@ const activeDirection = ref(null);
         </li>
       </ul>
     </div>
-    <DirectionModal :direction="activeDirection" @close="activeDirection = null" />
+    <InfoModal :item="activeDirection" @close="activeDirection = null" />
   </section>
 </template>

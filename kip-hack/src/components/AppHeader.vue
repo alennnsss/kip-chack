@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import AppIcon from './AppIcon.vue';
 
 const links = [
@@ -14,31 +14,44 @@ const links = [
 ];
 
 const isOpen = ref(false);
+const header = ref(null);
 const burger = ref(null);
 
-watch(isOpen, (open) => document.body.classList.toggle('is-locked', open));
+function close() {
+  isOpen.value = false;
+}
 
 function onKeydown(event) {
   if (event.key === 'Escape' && isOpen.value) {
-    isOpen.value = false;
+    close();
     burger.value.focus();
   }
 }
 
-onMounted(() => document.addEventListener('keydown', onKeydown));
-onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown));
+function onDocumentClick(event) {
+  if (isOpen.value && !header.value.contains(event.target)) close();
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', onKeydown);
+  document.addEventListener('click', onDocumentClick);
+});
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', onKeydown);
+  document.removeEventListener('click', onDocumentClick);
+});
 </script>
 
 <template>
-  <header class="header" :class="{ 'header--open': isOpen }">
+  <header ref="header" class="header">
     <div class="container header__inner">
-      <RouterLink class="logo" to="/" @click="isOpen = false">
+      <RouterLink class="logo" to="/" @click="close">
         <span class="logo__name">KIPCHACK</span>
         <span class="logo__caption">школа метания ножей</span>
       </RouterLink>
       <button
         ref="burger"
-        class="round-btn round-btn--filled header__burger"
+        class="round-btn round-btn--filled"
         type="button"
         :aria-label="isOpen ? 'Закрыть меню' : 'Открыть меню'"
         :aria-expanded="isOpen"
@@ -47,13 +60,15 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown));
       >
         <AppIcon :name="isOpen ? 'close' : 'menu'" />
       </button>
+      <Transition name="menu">
+        <nav v-if="isOpen" id="menu" class="menu" aria-label="Основное меню">
+          <ul class="menu__list">
+            <li v-for="(link, i) in links" :key="link.to" class="menu__item" :style="{ '--i': i }">
+              <RouterLink class="menu__link" :to="link.to" @click="close">{{ link.label }}</RouterLink>
+            </li>
+          </ul>
+        </nav>
+      </Transition>
     </div>
-    <nav v-show="isOpen" id="menu" class="menu" aria-label="Основное меню">
-      <ul class="menu__list">
-        <li v-for="link in links" :key="link.to">
-          <RouterLink class="menu__link" :to="link.to" @click="isOpen = false">{{ link.label }}</RouterLink>
-        </li>
-      </ul>
-    </nav>
   </header>
 </template>
