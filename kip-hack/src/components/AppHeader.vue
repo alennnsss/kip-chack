@@ -1,17 +1,8 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import AppIcon from './AppIcon.vue';
-
-const links = [
-  { to: '/', label: 'Главная' },
-  { to: '/#directions', label: 'Направления' },
-  { to: '/#about', label: 'О школе' },
-  { to: '/#formats', label: 'Форматы' },
-  { to: '/gallery', label: 'Галерея' },
-  { to: '/gallery#instructors', label: 'Инструкторы' },
-  { to: '/#prices', label: 'Цены' },
-  { to: '/#contacts', label: 'Контакты' },
-];
+import AppLogo from './AppLogo.vue';
+import { navLinks } from '../data/navigation.js';
 
 const isOpen = ref(false);
 const header = ref(null);
@@ -45,10 +36,7 @@ onBeforeUnmount(() => {
 <template>
   <header ref="header" class="header">
     <div class="container header__inner">
-      <RouterLink class="logo" to="/" @click="close">
-        <span class="logo__name">KIPCHACK</span>
-        <span class="logo__caption">школа метания ножей</span>
-      </RouterLink>
+      <AppLogo @click="close" />
       <button
         ref="burger"
         class="round-btn round-btn--filled"
@@ -63,7 +51,7 @@ onBeforeUnmount(() => {
       <Transition name="menu">
         <nav v-if="isOpen" id="menu" class="menu" aria-label="Основное меню">
           <ul class="menu__list">
-            <li v-for="(link, i) in links" :key="link.to" class="menu__item" :style="{ '--i': i }">
+            <li v-for="(link, i) in navLinks" :key="link.to" class="menu__item" :style="{ '--i': i }">
               <RouterLink class="menu__link" :to="link.to" @click="close">{{ link.label }}</RouterLink>
             </li>
           </ul>

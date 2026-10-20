@@ -1,4 +1,5 @@
 <script setup>
+import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import CtaSection from './components/CtaSection.vue';
 import IconSprite from './components/IconSprite.vue';
@@ -13,6 +14,7 @@ import { Analytics } from '@vercel/analytics/vue';
     <RouterView />
     <CtaSection />
   </main>
+  <AppFooter />
   <ScrollTopButton />
   <Analytics />
 </template>
