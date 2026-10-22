@@ -36,11 +36,17 @@ const year = new Date().getFullYear();
     <div class="container">
       <div class="footer__bottom">
         <p>© {{ year }} KIPCHACK</p>
-        <p>
-          Фото: <a class="footer__link" href="/credits.txt" target="_blank" rel="noopener">Wikimedia Commons</a>
-          (CC BY, CC BY-SA)
-        </p>
+        <div>
+            <p>
+              Фото: <a class="footer__link" href="/credits.txt" target="_blank" rel="noopener">Wikimedia Commons</a>
+              (CC BY, CC BY-SA)
+            </p>
+            <div class="made-by">
+              <p>Сделано Саин Аленом</p>
+            </div>
+        </div>    
       </div>
     </div>
+    
   </footer>
 </template>

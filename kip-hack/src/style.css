@@ -915,7 +915,9 @@ img {
   opacity: 0;
   transform: translateY(8px);
 }
-
+.made-by {
+  margin-top: 20px;
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
